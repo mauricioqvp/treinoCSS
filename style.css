@@ -1,0 +1,11 @@
+body{
+    --top-color: rgb(255, 170, 0);
+    --botton-color: yellow;
+    --my-gradient: linear-gradient(
+        var(--top-color),
+        var(--botton-color)
+    );
+
+    height: 100vh;
+    background: var(--my-gradient);
+}
