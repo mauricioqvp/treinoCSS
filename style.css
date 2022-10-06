@@ -1,12 +1,62 @@
-.c-button{
-    --button-unit: 1rem;
-    padding: var(--button-unit);
+/* :root {
+    --row-display: block;
 }
 
-.c-button-small {
-    --button-unit: 0.5rem;
+.row{
+    --row-display: block;
+    display: var(--row-display);
 }
 
-.c-button-large {
-    --button-unit: 1.5rem;
+@media screen and (min-width: 600px){
+    .row {
+        --row-display: flex;
+    }
+} */
+
+:root {
+    --font-family: helvetica, ubuntu, roboto, arial, sans-serif;
+    --size: 0.5rem;
+}
+
+body {
+    font-family: var(--font-family);
+}
+
+.c-card {
+    --_hue: 180;
+    --_lightness: 35%;
+    --_color: hsl(var(--_hue) 80% var(--_lightness));
+    --_outline-width: calc(var(--size) / 4);
+
+    background-color: #fff;
+    margin: calc(var(--size) * 2);
+    outline: var(--_outline-width) solid var(--_color);
+    padding: calc(var(--size) * 2);
+    transition: outline 125ms cubic-bezier(0, 0.55, 0.45, 1);
+    width: 35ch;
+}
+
+.c-card:hover{
+    --_outline-width: var(--size);
+}
+
+.c-card_title {
+    color: var(--_color);
+    margin: 0;
+}
+
+.c-card_cta {
+    --_cta-padding: 0.5rem;
+
+    all: inital;
+    background-color: var(--_color);
+    color: #fff;
+    cursor: pointer;
+    font-family: inherit;
+    opacity: 0.85;
+    padding: var(--_cta-padding) calc(var(--_cta-padding) * 2);
+}
+
+.c-card_cta:hover {
+    opacity: 1;
 }
