@@ -1,11 +1,12 @@
-body{
-    --top-color: rgb(255, 170, 0);
-    --botton-color: yellow;
-    --my-gradient: linear-gradient(
-        var(--top-color),
-        var(--botton-color)
-    );
+.c-button{
+    --button-unit: 1rem;
+    padding: var(--button-unit);
+}
 
-    height: 100vh;
-    background: var(--my-gradient);
+.c-button-small {
+    --button-unit: 0.5rem;
+}
+
+.c-button-large {
+    --button-unit: 1.5rem;
 }
